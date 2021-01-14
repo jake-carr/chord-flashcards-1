@@ -1,0 +1,177 @@
+// color scheme
+$black: rgba(1, 4, 0, 0.87);
+$gray: rgba(48, 51, 46, 1);
+$white: rgba(255, 251, 252, 1);
+$primary: rgba(98, 187, 193, 1);
+$secondary: rgba(236, 5, 142, 1);
+$green: rgb(15, 252, 114);
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $black;
+  color: $white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.App {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+button {
+  transition-duration: 0.25s;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $green;
+  color: $black;
+}
+
+.app-header {
+  background-color: $gray;
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-size: 24px;
+    color: $primary;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .score-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    .score {
+      margin: 1rem;
+      span {
+        color: $secondary;
+      }
+    }
+  }
+  .main-button-container {
+    margin-bottom: 1rem;
+    .main-button {
+      font-size: 16px;
+      border: none;
+      margin-right: 0.5rem;
+    }
+  }
+  .flashcard {
+    border: 2px solid $primary;
+    color: $white;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  .button-grid {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .chord-type-options {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .grid-controls {
+    .form-button {
+      font-size: 16px;
+      border: none;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 24%;
+  height: 2rem;
+  line-height: 2rem;
+  align-content: space-between;
+  .checkbox {
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    transition-duration: .25s;
+  }
+  .checkbox#unchecked {
+    background-color: gray;
+  }
+  .checkbox#checked {
+    background-color: $green;
+
+  }
+}
+.checkbox-container#auto-generate-toggler {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 2rem;
+  line-height: 2rem;
+  .checkbox {
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    transition-duration: .25s;
+  }
+  .checkbox#unchecked {
+    background-color: gray;
+  }
+  .checkbox#checked {
+    background-color: $green;
+  }
+}
+
+.feed {
+  margin-top: 1rem;
+}
+
+.feed#success {
+  color: $primary;
+}
+.feed#failure {
+  color: $secondary;
+}
+.feed#record {
+  color: $green;
+}
